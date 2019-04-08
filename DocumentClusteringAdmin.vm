@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<body>
+<br>
+
+
+
+#if ($textwordcnt < 10)
+<h1><font color = red> your text is very short to find same similar meaning documents;; </font> </h1>
+#end
+<br>
+<br>
+
+
+<h2> debug </h2>
+$debugtext
+#foreach ($line in $debugtext)
+ $line
+#end
+
+<h2> Results are wikipedia documents related with contents what you input </h2>
+
+#foreach ($line in $hightfidfdoclist)
+  $line.getUserStr() <br/>
+#end
+
+
+<br/>
+<br/>
+<br/>
+
+
+</body>
+
